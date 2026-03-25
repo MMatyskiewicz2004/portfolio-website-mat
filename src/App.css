@@ -875,7 +875,7 @@
   border-radius: 18px;
   overflow: hidden;
   padding: 0;
-  height: 280px;
+  height: 315px;
 }
 
 .solace-wireframes-image {
@@ -884,6 +884,8 @@
   display: block;
   object-fit: contain;
   object-position: left center;
+  transform: scale(1.06);
+  transform-origin: left center;
 }
 
 .solace-wireframes-content {
