@@ -54,7 +54,7 @@ function App() {
         <h2 className="projects-title">Featured Projects</h2>
 
         <div className="projects-grid">
-          <a href="#/projects" className="project-card project-card-solace">
+          <a href="#/projects/solace" className="project-card project-card-solace">
             <div className="project-card-media">
               <img
                 src="/solace_assets/solace_card.png"

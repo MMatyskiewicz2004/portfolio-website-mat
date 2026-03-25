@@ -19,7 +19,7 @@ function ProjectsPage() {
         <h1 className="projects-page-title">PROJECTS</h1>
 
         <section className="projects-layout">
-          <a href="#" className="project-card project-card-solace project-card-large">
+          <a href="#/projects/solace" className="project-card project-card-solace project-card-large">
             <div className="project-card-media">
               <img
                 src="/solace_assets/solace_card.png"
