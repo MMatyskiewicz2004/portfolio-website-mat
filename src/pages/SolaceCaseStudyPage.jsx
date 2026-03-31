@@ -1,22 +1,14 @@
 import { useState } from 'react'
 import '../App.css'
+import SiteHeader from '../components/SiteHeader'
+import SiteFooter from '../components/SiteFooter'
 
 function SolaceCaseStudyPage() {
   const [wireTab, setWireTab] = useState('lofi')
 
   return (
     <div className="app solace-case-page">
-      <header className="header">
-        <div className="header-left">
-          <img src="/folioassets/mateuszlogo.svg" alt="Logo" className="header-logo" />
-          <span className="header-name">mateusz matyskiewicz</span>
-        </div>
-        <nav className="header-nav">
-          <a href="#/" className="nav-link">HOME</a>
-          <a href="#about" className="nav-link">ABOUT</a>
-          <a href="#/projects" className="nav-link">PROJECTS</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main className="solace-case-main">
         <h1 className="solace-case-title">Solace</h1>
@@ -310,56 +302,179 @@ function SolaceCaseStudyPage() {
             </div>
 
             <aside
-              className={`solace-wireframes-panel solace-wireframes-panel--${wireTab}`}
+              className={`solace-wireframes-notes solace-wireframes-notes--${wireTab}`}
               aria-label="Wireframe key things"
             >
-              <h3 className="solace-wireframes-panel-title">Key Things I Kept in Mind</h3>
-              <div className="solace-wireframes-panel-list">
-                <div>Keep it Simple</div>
-                <div>Keep it Intuitive</div>
-                <div>Keep it Familiar</div>
-                <div>Easy to Learn</div>
-                <div className="solace-wireframes-panel-last">Make it Fun with Solly</div>
-              </div>
+              <h3 className="solace-wireframes-notes-title">Key Things I Kept in Mind</h3>
+              <ul className="solace-wireframes-notes-list">
+                <li>Keep it Simple</li>
+                <li>Keep it Intuitive</li>
+                <li>Keep it Familiar</li>
+                <li>Easy to Learn</li>
+                <li>Make it Fun with Solly</li>
+              </ul>
             </aside>
           </div>
           </div>
         </section>
+
+        <section className="solace-branding">
+          <h2 className="solace-branding-title">05 • Branding &amp; Visual Identity</h2>
+
+          <div className="solace-branding-layout">
+            <div className="solace-brand-grid">
+              <figure className="solace-brand-cell">
+                <img
+                  src="/solace_assets/first-iteration.png"
+                  alt="Solace logo and mascot first iteration"
+                  className="solace-brand-image"
+                />
+              </figure>
+              <figure className="solace-brand-cell">
+                <img
+                  src="/solace_assets/second-iteration.png"
+                  alt="Solace logo and mascot second iteration"
+                  className="solace-brand-image"
+                />
+              </figure>
+              <figure className="solace-brand-cell">
+                <img
+                  src="/solace_assets/mascot-states.png"
+                  alt="Mascot states"
+                  className="solace-brand-image"
+                />
+              </figure>
+              <figure className="solace-brand-cell">
+                <img
+                  src="/solace_assets/icon-sketches.png"
+                  alt="Icon sketches"
+                  className="solace-brand-image"
+                />
+              </figure>
+            </div>
+
+            <aside className="solace-brand-notes">
+              <h3 className="solace-brand-notes-title">Logo Iterations &amp; Development</h3>
+              <p className="solace-body-text">
+                One of my key contributions was <strong>conceptualizing and designing</strong> the
+                <strong> Solace mascot</strong>, Solly, which became central to the app’s identity.
+              </p>
+              <p className="solace-body-text">
+                I proposed the mascot as a way to shift the tone of the app from clinical tracking to
+                collaborative growth. Instead of positioning Solace as something that monitors users, I
+                designed it to feel like you’re building habits alongside Solly progressing together.
+              </p>
+              <p className="solace-body-text"><strong>I:</strong></p>
+              <ul className="solace-brand-list">
+                <li><strong>Designed</strong> the mascot from initial sketches to final form</li>
+                <li><strong>Refined</strong> its shape language and expressions</li>
+                <li><strong>Created all visual assets and icons</strong> used in the app</li>
+                <li><strong>Ensured consistency</strong> across UI elements</li>
+              </ul>
+              <p className="solace-body-text">
+                The mascot was inspired by <strong>stress‑relief squeeze toys</strong> and objects that
+                symbolize comfort and tension release. I based Solly’s rounded form and soft visual
+                presence on this idea, aligning the brand identity directly with the app’s purpose:
+                <strong> stress relief and daily recovery.</strong>
+              </p>
+              <p className="solace-body-text">This decision helped make the app feel:</p>
+              <ul className="solace-brand-bullets">
+                <li><strong>Less intimidating</strong></li>
+                <li><strong>More human</strong></li>
+                <li><strong>Slightly playful, while still respectful</strong></li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section className="solace-final-iterations">
+          <h2 className="solace-final-title">Final Iterations</h2>
+          <div className="solace-final-wrap">
+            <img
+              src="/solace_assets/all-logo-iconsfinal.svg"
+              alt="Final mascot and icon iterations"
+              className="solace-final-image"
+            />
+          </div>
+        </section>
+
+        <section className="solace-results">
+          <h2 className="solace-results-title">06 • Results</h2>
+          <div className="solace-results-layout">
+            <figure className="solace-results-media">
+              <div className="solace-results-mediaLabel">D3: CONNECTHER OUTCOMES</div>
+              <img
+                src="/solace_assets/outcome-pic.png"
+                alt="Outcomes crowd photos"
+                className="solace-results-image"
+              />
+            </figure>
+
+            <aside className="solace-results-notes">
+              <h3 className="solace-results-h">From Complexity to Clarity</h3>
+              <p className="solace-body-text">
+                Solace began as a wellness app with AI tracking, gamification, peer elements, and multiple
+                health tools. After deeper research and working within a tight timeline, we realized
+                complexity would reduce adoption. Iron workers did not want to learn a new system or
+                navigate text‑heavy features during an already demanding workday. The app needed to be
+                simple, familiar, and fast.
+              </p>
+              <p className="solace-body-text">
+                We refined Solace to focus on quick access stretches, short breathing sessions, clear pain
+                tracking, and AI‑powered guidance based on user input. Solly appears on the homepage as a
+                personal motivator, responding to progress and pain points with instantly generated support.
+                We worked closely with our advisor, an experienced iron worker, to ensure the tone and
+                features felt authentic and respectful rather than clinical or preachy.
+              </p>
+
+              <h3 className="solace-results-h">Impact &amp; Recognition</h3>
+              <ul className="solace-results-list">
+                <li>Proved that research‑driven, trade‑specific wellness tools can be both practical and engaging</li>
+                <li>Increased usability by simplifying features and reducing friction</li>
+                <li>Strengthened adoption through culturally aligned design decisions</li>
+                <li>Recognized with 2nd Place at the BCIT D3 FSWD Annual Showcase</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section className="solace-learned">
+          <div className="solace-learned-layout">
+            <div className="solace-learned-media">
+              <img
+                src="/solace_assets/what-i-learned.png"
+                alt="Solace app what I learned screens"
+                className="solace-learned-image"
+              />
+            </div>
+
+            <div className="solace-learned-notes">
+              <h2 className="solace-learned-title">What I Learned</h2>
+              <p className="solace-body-text">
+                This project reinforced how important <strong>empathy is in design</strong>. Understanding
+                the realities of iron workers shaped every decision, from features and layout to branding
+                and overall aesthetic.
+              </p>
+              <p className="solace-body-text">
+                Designing without assumptions and grounding ideas in research made the product stronger and
+                more respectful to its users.
+              </p>
+              <p className="solace-body-text">
+                As a designer, I took ownership of the branding and visual identity while contributing to
+                wireframes and prototypes. Managing both creative direction and timelines strengthened my
+                time management and leadership skills.
+              </p>
+              <p className="solace-body-text">
+                Most importantly, I learned that <strong>curiosity and research</strong> drive better design
+                decisions. When the process is <strong>rooted in empathy</strong>, the outcome feels
+                intentional and aligned with real user needs.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-content">
-          <h2 className="footer-title">
-            Let&apos;s
-            <br />
-            Connect!
-          </h2>
-
-          <div className="footer-contact-row">
-            <a className="footer-contact-pill" href="mailto:mateuszma12004@gmail.com">
-              <img src="/folioassets/mail-logo.svg" alt="Mail" className="footer-contact-icon" />
-              <span>mateuszma12004@gmail.com</span>
-            </a>
-            <a
-              className="footer-contact-pill"
-              href="https://www.linkedin.com/in/mateusz-motyskiewicz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="/folioassets/linkdin-logo.svg" alt="LinkedIn" className="footer-contact-icon" />
-              <span>in/mateusz-motyskiewicz</span>
-            </a>
-          </div>
-
-          <div className="footer-divider" />
-
-          <nav className="footer-nav">
-            <a href="#/" className="footer-nav-link">HOME</a>
-            <a href="#about" className="footer-nav-link">ABOUT</a>
-            <a href="#/projects" className="footer-nav-link">PROJECTS</a>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter active="projects" />
     </div>
   )
 }

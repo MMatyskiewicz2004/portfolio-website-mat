@@ -11,8 +11,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  background: #fdfbf8;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.header--hidden {
+  transform: translateY(-120%);
+  box-shadow: none;
 }
 
 .header-left {
@@ -66,6 +74,15 @@
 }
 
 .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link--active {
+  color: #E87B2F;
+  font-weight: 700;
+}
+
+.nav-link--active::after {
   width: 100%;
 }
 
@@ -435,7 +452,7 @@
 
 /* Solace next sections (role + problem) */
 .solace-steps {
-  margin-top: 2.4rem;
+  margin-top: 3.4rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -564,7 +581,7 @@
 
 /* 03 • The Research section */
 .solace-research {
-  margin-top: 2.6rem;
+  margin-top: 3.6rem;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 2rem;
@@ -651,7 +668,7 @@
 
 /* Personal Takeaways section */
 .solace-takeaways {
-  margin-top: 2rem;
+  margin-top: 3.2rem;
   background: #7665d8;
   border-radius: 24px;
   padding: 1.4rem 1.5rem 1.8rem;
@@ -699,7 +716,7 @@
 
 /* Personas section */
 .solace-personas {
-  margin-top: 2rem;
+  margin-top: 3.2rem;
 }
 
 .solace-personas-title {
@@ -785,7 +802,7 @@
 
 /* 04 • Wire frames section */
 .solace-wireframes {
-  margin-top: 2.4rem;
+  margin-top: 3.4rem;
 }
 
 .solace-wireframes-title {
@@ -899,47 +916,48 @@
   flex: 0 0 52%;
 }
 
-.solace-wireframes-panel {
+.solace-wireframes-notes {
   flex: 1;
-  background: #262b2a;
-  border-radius: 22px;
-  padding: 2.4rem 2.3rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0.4rem 0.2rem 0 0.6rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.solace-wireframes-panel-title {
-  margin: 0 0 1.6rem;
-  font-size: 1.75rem;
+.solace-wireframes-notes-title {
+  margin: 0 0 1rem;
+  font-size: 2.1rem;
   font-weight: 900;
   line-height: 1;
 }
 
-.solace-wireframes-panel-list {
+.solace-wireframes-notes-list {
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  list-style: disc;
   font-weight: 800;
 }
 
-.solace-wireframes-panel-last {
-  margin-top: 0.3rem;
+.solace-wireframes-notes-list li {
+  font-size: 1.7rem;
+  line-height: 1.1;
 }
 
-.solace-wireframes-panel--lofi {
-  background: #262b2a;
-  color: #ffffff;
+.solace-wireframes-notes--lofi {
+  color: #b9ff55;
 }
 
-.solace-wireframes-panel--midfi {
-  background: #262b2a;
-  color: #ffffff;
+.solace-wireframes-notes--midfi {
+  color: #262b2a;
 }
 
-.solace-wireframes-panel--hifi {
-  background: #262b2a;
+.solace-wireframes-notes--hifi {
   color: #ffffff;
 }
 
@@ -947,6 +965,207 @@
   display: none;
 }
 
+/* 05 • Branding & Visual Identity */
+.solace-branding {
+  margin-top: 3.8rem;
+}
+
+.solace-branding-title {
+  color: var(--solace-purple);
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0 0 1.2rem;
+}
+
+.solace-branding-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.solace-brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-self: center;
+  margin-top: 0.6rem;
+}
+
+.solace-brand-cell {
+  margin: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ececec;
+}
+
+.solace-brand-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.solace-brand-notes {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+}
+
+.solace-brand-notes-title {
+  color: var(--solace-purple);
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0 0 0.6rem;
+}
+
+.solace-brand-list,
+.solace-brand-bullets {
+  margin: 0.6rem 0 0.9rem;
+  padding-left: 1.1rem;
+}
+
+.solace-brand-list li,
+.solace-brand-bullets li {
+  margin: 0.25rem 0;
+  font-weight: 800;
+  color: #000000;
+}
+
+@media (max-width: 960px) {
+  .solace-branding-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final Iterations */
+.solace-final-iterations {
+  margin-top: 3.2rem;
+}
+
+.solace-final-title {
+  text-align: center;
+  color: var(--solace-purple);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0 0 0.8rem;
+}
+
+.solace-final-wrap {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solace-final-image {
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  display: block;
+}
+
+/* Results */
+.solace-results {
+  margin-top: 3.4rem;
+}
+
+.solace-results-title {
+  color: var(--solace-purple);
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 1.2rem;
+}
+
+.solace-results-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.solace-results-media {
+  background: #14181a;
+  border-radius: 28px;
+  padding: 0.9rem;
+  max-width: 640px;
+  justify-self: center;
+}
+
+.solace-results-notes {
+  align-self: center;
+}
+
+.solace-results-mediaLabel {
+  color: #a8b0b2;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.solace-results-image {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.solace-results-h {
+  color: var(--solace-purple);
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 0 0 0.6rem;
+}
+
+.solace-results-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.solace-results-list li {
+  margin: 0.25rem 0;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* What I Learned */
+.solace-learned {
+  margin-top: 3.4rem;
+}
+
+.solace-learned-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.solace-learned-media {
+  display: flex;
+  justify-content: center;
+}
+
+.solace-learned-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+.solace-learned-title {
+  color: var(--solace-purple);
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 0.8rem;
+}
+
+.solace-learned-notes strong {
+  font-size: 1.12em;
+  font-weight: 900;
+}
 @keyframes solaceGlowLeft {
   0% {
     transform: translate(0, 0) scale(1);
@@ -1073,6 +1292,10 @@
 
 .footer-nav-link:hover::after {
   width: 100%;
+}
+
+.footer-nav-link--active {
+  font-weight: 600;
 }
 
 /* Responsive */
