@@ -25,7 +25,11 @@ function App() {
             <span className="hero-dot" />
             <span className="hero-dot" />
           </div>
-          <p className="subheading">UI/UX Designer | Graphic Designer</p>
+          <p className="subheading">
+            I am a <span className="subheading-strong">UI/UX Designer</span> using my illustration skills to create
+            <br />
+            impactful and visually engaging digital experiences.
+          </p>
           
           {/* Skills Strip */}
           <div className="skills-strip" ref={skillsRef}>

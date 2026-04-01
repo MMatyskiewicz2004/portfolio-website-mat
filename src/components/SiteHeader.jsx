@@ -26,6 +26,7 @@ function SiteHeader() {
   const path = location.pathname
   const isHome = path === '/' || path === ''
   const isProjects = path.startsWith('/projects')
+  const isAbout = path.startsWith('/about')
 
   return (
     <header className={`header ${isHidden ? 'header--hidden' : ''}`}>
@@ -35,7 +36,7 @@ function SiteHeader() {
       </div>
       <nav className="header-nav">
         <a href="#/" className={`nav-link ${isHome ? 'nav-link--active' : ''}`}>HOME</a>
-        <a href="#about" className="nav-link">ABOUT</a>
+        <a href="#/about" className={`nav-link ${isAbout ? 'nav-link--active' : ''}`}>ABOUT</a>
         <a href="#/projects" className={`nav-link ${isProjects ? 'nav-link--active' : ''}`}>PROJECTS</a>
       </nav>
     </header>
