@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import './App.css'
 import Logo from './components/Logo'
+import daybreakThumb from '../daybreak_assets/daybreak_thumbnail.png'
 import SiteHeader from './components/SiteHeader'
 import SiteFooter from './components/SiteFooter'
 
@@ -66,13 +67,19 @@ function App() {
             </p>
           </a>
 
-          <a href="#/projects" className="project-card project-card-template">
-            <div className="project-card-media project-card-media-template" />
-            <h3 className="project-card-title">Big Case Study</h3>
+          <a href="#/projects/daybreak" className="project-card project-card-daybreak">
+            <div className="project-card-media">
+              <img
+                src={daybreakThumb}
+                alt="Daybreak project preview"
+                className="project-card-image"
+              />
+            </div>
+            <h3 className="project-card-title">Daybreak</h3>
             <p className="project-card-subtitle">Case Study + UX Design + Figma</p>
             <p className="project-card-description">
-              Template card for your next case study. This will be duplicated and replaced with your new
-              project details when you send the next design.
+              A multiplayer tabletop-inspired game about racing to escape an island using cards to
+              advance or sabotage others while minimizing points.
             </p>
           </a>
         </div>
